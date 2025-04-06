@@ -1,0 +1,37 @@
+/* Main styles for the application */
+:root {
+    --background: #f8f9fb;
+    --foreground: #0f172a;
+    --primary: #2563eb;
+    --accent: #60a5fa;
+    --muted: #f1f5f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: var(--foreground);
+    background: var(--background);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Add more base styles... */
+
+/* Add your existing styles here */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Add more of your existing styles... */ 

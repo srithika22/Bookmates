@@ -1,0 +1,26 @@
+/* Main styles for the application */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* About Page Styles */
+.hero {
+  background-color: #e0f7fa;
+  padding: 20px;
+  text-align: center;
+}
+
+.mission, .team {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-member {
+  margin: 10px 0;
+}
