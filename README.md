@@ -1,3 +1,4 @@
+
 # 📚 Bookmates – Your Personal Book Sharing Portal
 
 **Bookmates** is a dynamic web application that allows users to **share, browse, and connect over books**. Built using **HTML, CSS, PHP, and MySQL**, it supports secure user authentication, book uploads, and a clean browsing interface. The platform was developed locally using **XAMPP** and deployed on **InfinityFree** for public access.
@@ -30,7 +31,6 @@
 | Optional    | JavaScript (`/js/` folder)     |
 
 ---
-🗂️ Project Structure
 
 ## 🗂️ Project Structure
 
@@ -54,92 +54,71 @@
 ├── backend.txt              # Development references
 ├── /js/                     # JavaScript functionality
 ├── /styles/                 # CSS stylesheets
-/bookmates/
-├── .htaccess
-├── index.html               # Home page
-├── index.css
-├── login.html               # Login page
-├── signup.html              # Signup page
-├── post-a-book.html         # Form to upload a book
-├── displaybooks.php         # Handles book form submissions
-├── about.html
-├── about.css
-├── browse-books.html
-├── browse-books.css
-├── contact.html
-├── contact.css
-├── chat.html                # Optional chat module
-├── enhanced.css             # Extra styling
-├── backend.txt              # Development references
-├── /js/                     # JavaScript functionality
-├── /styles/                 # CSS stylesheets
+```
 
-/bookmates/
-├── .htaccess
-├── index.html               # Home page
-├── index.css
-├── login.html               # Login page
-├── signup.html              # Signup page
-├── post-a-book.html         # Form to upload a book
-├── displaybooks.php         # Handles book form submissions
-├── about.html
-├── about.css
-├── browse-books.html
-├── browse-books.css
-├── contact.html
-├── contact.css
-├── chat.html                # Optional chat module
-├── enhanced.css             # Extra styling
-├── backend.txt              # Development references
-├── /js/                     # JavaScript functionality
-├── /styles/                 # CSS stylesheets
+---
 
+## 🛠️ Getting Started with Bookmates
 
+### Requirements
 
+- PHP & Apache (via XAMPP)
+- MySQL for database
+- A modern web browser
 
-🧰 Getting Started with Bookmates
-Setting up Bookmates on your local machine is easy! Just follow these steps:
+### 📍 Local Installation Guide
 
-🛠️ Requirements
-PHP & Apache (via XAMPP)
+#### 🔧 Step 1: Install XAMPP
+Download and install the latest version of XAMPP for your OS from https://www.apachefriends.org.
 
-MySQL for database
-
-A modern web browser
-
-📍 Local Installation Guide
-🔧 Step 1: Install XAMPP
-Download and install the latest version of XAMPP for your OS.
-
-📁 Step 2: Set Up Project Files
-Move the entire bookmates folder into your XAMPP htdocs directory:
+#### 📁 Step 2: Set Up Project Files
+Move the entire Bookmates folder into your XAMPP `htdocs` directory:
+```
 C:/xampp/htdocs/bookmates
+```
 
-🚀 Step 3: Start Services
-Open the XAMPP Control Panel and start:
+#### 🚀 Step 3: Start Services
+Open the XAMPP Control Panel and start the following services:
+- ✅ Apache
+- ✅ MySQL
 
-✅ Apache
+#### 🗃️ Step 4: Import Database
+1. Open [phpMyAdmin](http://localhost/phpmyadmin)
+2. Create a new database (e.g., `bookmates_db`)
+3. Import the provided SQL file if available
 
-✅ MySQL
-
-🗃️ Step 4: Import Database
-Go to http://localhost/phpmyadmin
-
-Create a new database (e.g., bookmates_db)
-
-Import the .sql file if available
-
-🌐 Step 5: Launch in Browser
+#### 🌐 Step 5: Launch in Browser
 Visit your local Bookmates site at:
-http://localhost/bookmates
+[http://localhost/bookmates](http://localhost/bookmates)
 
-☁️ Online Hosting Info
-Bookmates is deployed using InfinityFree, a free PHP hosting platform.
+---
 
-💡 Frontend & Backend: PHP + HTML + CSS hosted via InfinityFree
+## ☁️ Online Hosting Info
 
-🗄️ Database: MySQL accessed through InfinityFree’s phpMyAdmin
+Bookmates is deployed using **InfinityFree**, a free PHP hosting platform.
 
-🔗 Live Demo
-bookmates.ct.ws (Replace with your actual URL if different)
+- 💡 **Frontend & Backend**: PHP + HTML + CSS hosted via InfinityFree
+- 🗄️ **Database**: MySQL accessed through InfinityFree’s phpMyAdmin
+- 🔗 **Live Demo**: [bookmates.ct.ws](http://bookmates.ct.ws)
 
+---
+
+## 📌 Planned Enhancements
+
+- 🔒 Session management and logout functionality
+- 🖼️ Book cover image uploads
+- 🧠 Smart search and filter by title/author
+- 💬 Live chat or discussion threads
+- 📱 Fully responsive mobile view
+
+---
+
+## 👥 Developed By
+
+This project was created by the **Bookmates Team** as part of an academic initiative to encourage reading and community sharing.
+
+---
+
+## 📄 License
+
+Free to use, modify, and share for educational and non-commercial purposes.
