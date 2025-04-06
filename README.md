@@ -31,9 +31,7 @@
 
 ---
 🗂️ Project Structure
-bash
-Copy
-Edit
+
 /bookmates/
 ├── .htaccess
 ├── index.html               # Home page
