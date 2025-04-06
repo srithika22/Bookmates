@@ -31,6 +31,29 @@
 
 ---
 🗂️ Project Structure
+
+## 🗂️ Project Structure
+
+```bash
+/bookmates/
+├── .htaccess
+├── index.html               # Home page
+├── index.css
+├── login.html               # Login page
+├── signup.html              # Signup page
+├── post-a-book.html         # Form to upload a book
+├── displaybooks.php         # Handles book form submissions
+├── about.html
+├── about.css
+├── browse-books.html
+├── browse-books.css
+├── contact.html
+├── contact.css
+├── chat.html                # Optional chat module
+├── enhanced.css             # Extra styling
+├── backend.txt              # Development references
+├── /js/                     # JavaScript functionality
+├── /styles/                 # CSS stylesheets
 /bookmates/
 ├── .htaccess
 ├── index.html               # Home page
