@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="thank-you.css">
+</head>
+<body>
+    <header>
+        <div class="logo">📚 BookMates</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="post-book.html">Post a Book</a>
+            <a href="browse-books.html">Browse Books</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="logout.js" id="logoutButton" style="display: none;">Logout</a>
+
+    </header>
+    <script>
+        // Check if the user is logged in and show/hide the logout button
+        const loggedIn = localStorage.getItem('loggedIn');
+        if (loggedIn) {
+            document.getElementById('logoutButton').style.display = 'inline'; // Show logout button
+        }
+    </script>
+
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Thank You!</h1>
+            <p>Your book has been successfully posted.</p>
+        </div>
+    </section>
+
+
+    <div class="thank-you-card">
+        <h1>Thank You!</h1>
+        <p>Your book has been successfully posted.</p>
+    </div>
+
+    
+    <footer>
+        <p>&copy; 2025 BookMates. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> 📚 BookMates</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/book-grid.css">
+    <link rel="stylesheet" href="styles/how-it-works.css">
+    <link rel="stylesheet" href="styles/cta.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body class="min-h-screen bg-background">
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container">
+        <a href="/" class="logo"> 📚 BookMates</a>
+        <nav class="desktop-nav">
+          <a href="/" class="nav-link">Home</a>
+          
+         
+          <a href="Login.html" class="nav-link">Login/Sign Up</a>
+          
+        </nav>
+       
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-background">
+          <div class="bg-accent-blur top"></div>
+          <div class="bg-accent-blur bottom"></div>
+        </div>
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <div class="hero-badge">
+                <i data-lucide="book-open" class="hero-badge-icon"></i>
+                <span>Now accepting donations</span>
+              </div>
+              <h1>Giving   Books a Second Life </h1>
+              <p>Buy secondhand books at nominal prices or donate your pre-loved reads. Join our community-driven exchange that makes reading accessible for all.</p>
+            
+            </div>
+            <div class="hero-image">
+              <div class="book-grid-display">
+                <div class="book-column">
+                  <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f" alt="Book cover">
+                  <img src="https://images.unsplash.com/photo-1495640452828-3df6795cf69b" alt="Book cover">
+                </div>
+                <div class="book-column offset">
+                  <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e" alt="Book cover">
+                  <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19" alt="Book cover">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Our platform makes it easy to buy affordable books or donate your pre-loved collection to readers in need</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <h3>Browse Books</h3>
+                    <p>Explore our collection of secondhand books across various genres and conditions</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i data-lucide="check-square"></i>
+                    </div>
+                    <h3>Purchase or Donate</h3>
+                    <p>Buy books at nominal prices or choose to donate your books to our community</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i data-lucide="refresh-cw"></i>
+                    </div>
+                    <h3>Exchange & Repeat</h3>
+                    <p>Keep the cycle going by exchanging your books after you've read them</p>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <h3>ReadyToRead</h3>
+            <p>A community-driven platform for exchanging books at nominal prices or through donations, making reading accessible for everyone.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+            <li><a href="Login.html"</a></li>
+             
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="current-year"></span> ReadyToRead. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+      
+      // Update copyright year
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

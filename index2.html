@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMates - Home</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="enhanced.css"> <!-- Link to enhanced CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Elegant fonts -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">📚 BookMates</div>
+        <nav>
+            <input type="text" placeholder="Search books..." class="search-bar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="notifications.html" class="icon">🔔</a>
+            <a href="user-profile.html" class="icon">👤</a>
+            <a href="Login.html" id="loginButton">Login</a>
+            <a href="logout.js" id="logoutButton" style="display: none;">Logout</a>
+            <a href="post-book.html" id="postBookBtn" style="display: none;">Post a Book</a>
+            <a href="browse-books.html" id="browseBooksBtn" style="display: none;">Browse Books</a>
+        </nav>
+        <script>
+            // Check if the user is logged in and show/hide appropriate buttons
+            const loggedIn = localStorage.getItem('loggedIn');
+            if (loggedIn) {
+                document.getElementById('logoutButton').style.display = 'inline'; // Show logout button
+                document.getElementById('postBookBtn').style.display = 'inline'; // Show post a book
+                document.getElementById('browseBooksBtn').style.display = 'inline'; // Show browse books
+                document.getElementById('loginButton').style.display = 'none'; // Hide login button
+            }
+        </script>
+    </header>
+
+    <!-- Hero Section with HD background image -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Give Books a Second Life!</h1>
+            <p>Don't let books gather dust on your shelf! Share them with someone who needs them.</p>
+            <div class="cta-buttons">
+                <a href="post-book.html" class="btn">Post a Book</a>
+                <a href="browse-books.html" class="btn">Browse Books</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose BookMates?</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="icon-container">
+                    <img src="https://via.placeholder.com/80" alt="Eco-Friendly">
+                </div>
+                <h3>Eco-Friendly</h3>
+                <p>Reduce waste by giving your books a new purpose and promoting sustainability.</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon-container">
+                    <img src="https://via.placeholder.com/80" alt="Community Driven">
+                </div>
+                <h3>Community Driven</h3>
+                <p>Join a network of book lovers and help someone discover the joy of reading.</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon-container">
+                    <img src="https://via.placeholder.com/80" alt="Easy to Use">
+                </div>
+                <h3>Easy to Use</h3>
+                <p>Post or find books effortlessly with our simple and intuitive platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <script src="logout.js"></script>
+        <p>&copy; 2025 BookMates. All rights reserved.</p>
+    </footer>
+</body>
+</html>
