@@ -30,7 +30,6 @@
 | Optional    | JavaScript (`/js/` folder)     |
 
 ---
-
 ## 🗂️ Project Structure
 
 ```bash
@@ -53,7 +52,6 @@
 ├── backend.txt              # Development references
 ├── /js/                     # JavaScript functionality
 ├── /styles/                 # CSS stylesheets
-
     
 
 
