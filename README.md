@@ -63,9 +63,7 @@ Setting up Bookmates on your local machine is easy! Just follow these steps to g
 
 🛠️ Requirements
 PHP & Apache (via XAMPP)
-
 MySQL for database
-
 A modern web browser
 
 📍 Local Installation Guide
@@ -74,39 +72,28 @@ Download and install the latest version of XAMPP for your OS.
 
 📁 Step 2: Set Up Project Files
 Move the entire bookmates folder into your XAMPP htdocs directory:
-
-bash
-Copy
-Edit
 C:/xampp/htdocs/bookmates
+
 🚀 Step 3: Start Services
 Open the XAMPP Control Panel and make sure the following are running:
-
 ✅ Apache
-
 ✅ MySQL
 
 🗃️ Step 4: Import Database
 Open http://localhost/phpmyadmin
-
 Create a new database (e.g., bookmates_db)
-
 Import the SQL file if available
 
 🌐 Step 5: Launch in Browser
 Visit your local Bookmates site at:
-
-url
-Copy
-Edit
 http://localhost/bookmates
+
 ☁️ Online Hosting Info
 Bookmates is deployed using InfinityFree, a free PHP hosting platform.
-
 💡 Frontend & Backend: PHP + HTML + CSS hosted via InfinityFree
 
 🗄️ Database: MySQL accessed through InfinityFree’s phpMyAdmin
 
 🔗 Live Demo:
-https://your-infinityfree-link.com
-(Replace with your actual project URL)
+bookmates.ct.ws
+
