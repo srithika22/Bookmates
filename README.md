@@ -31,7 +31,6 @@
 
 ---
 🗂️ Project Structure
-
 /bookmates/
 ├── .htaccess
 ├── index.html               # Home page
