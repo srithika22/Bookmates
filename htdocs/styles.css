@@ -1,0 +1,113 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif; /* You can use 'Georgia', 'Merriweather', or any serif font */
+    background-color: #f4f1e1; /* Light beige color to give a bookish feel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login/Sign-Up container styling */
+.signup-container, .login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px; /* Slightly more rounded for a soft feel */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    transition: box-shadow 0.3s ease; /* Add smooth shadow transition on hover */
+}
+
+/* Hover effect for containers */
+.signup-container:hover, .login-container:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styling */
+.signup-container h2, .login-container h2 {
+    margin-bottom: 25px;
+    color: #4a4a4a; /* Dark grey for a soft professional look */
+    font-family: 'Georgia', serif; /* For a more literary, bookish feel */
+}
+
+/* Input field styling */
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px; /* More rounded input fields */
+    font-size: 16px;
+    font-family: 'Arial', sans-serif; /* Sans-serif for inputs for better legibility */
+    background-color: #f7f7f7; /* Slight background shade for inputs */
+}
+
+/* Button styling */
+.signup-container button, .login-container button {
+    width: 100%;
+    padding: 14px;
+    background-color: #6c4f37; /* A warm brown color to fit the book theme */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for buttons */
+}
+
+/* Button hover effect */
+.signup-container button:hover, .login-container button:hover {
+    background-color: #5a402d; /* Darker brown on hover */
+}
+
+/* Link styling */
+.signup-container p a, .login-container p a {
+    color: #6c4f37; /* Matching the button's warm brown color */
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+}
+
+.signup-container p a:hover, .login-container p a:hover {
+    text-decoration: underline;
+    color: #5a402d; /* Darker brown for hover effect */
+}
+
+/* Small text below the form for additional messages */
+.signup-container p, .login-container p {
+    margin-top: 20px;
+    color: #666; /* Light grey color for text */
+    font-size: 14px;
+}
+
+/* Responsive Design: Adjust for smaller screens */
+@media (max-width: 480px) {
+    .signup-container, .login-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .signup-container button, .login-container button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .signup-container h2, .login-container h2 {
+        font-size: 22px;
+    }
+}

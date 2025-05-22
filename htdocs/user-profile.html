@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - BookMates</title>
+    <link rel="stylesheet" href="user-profile.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">📚 BookMates</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="post-book.html">Post a Book</a>
+            <a href="browse-books.html">Browse Books</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="logout.js" id="logoutButton" class="logout">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome Back, John Doe!</h1>
+            <p>Manage your books, wishlist, and reviews all in one place.</p>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="profile-img">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            </div>
+            <div class="user-info">
+                <h2>John Doe</h2>
+                <p>Email: johndoe@example.com</p>
+                <p>Location: City, Country</p>
+            </div>
+        </div>
+
+        <!-- User Stats -->
+        <div class="user-stats">
+            <div class="stat-card">
+                <h3>Books Posted</h3>
+                <p>5</p>
+            </div>
+            <div class="stat-card">
+                <h3>Wishlist</h3>
+                <p>2</p>
+            </div>
+            <div class="stat-card">
+                <h3>Reviews</h3>
+                <p>3</p>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button onclick="location.href='edit-profile.html'">Edit Profile</button>
+            <button onclick="location.href='manage-books.html'">Manage Books</button>
+        </div>
+
+        <!-- Notifications Section -->
+        <div class="notifications">
+            <h2>Notifications</h2>
+            <div class="notification-box">
+                <p>No new notifications at the moment.</p>
+            </div>
+        </div>
+
+        <!-- Posted Books Section -->
+        <div class="posted-books">
+            <h2>Posted Books</h2>
+            <div class="book-cards">
+                <div class="book-card">
+                    <h3>The Great Gatsby</h3>
+                    <p>Author: F. Scott Fitzgerald</p>
+                    <p>Condition: Like New</p>
+                    <a href="contact.html" class="contact-link">Contact Owner</a>
+                </div>
+                <div class="book-card">
+                    <h3>1984</h3>
+                    <p>Author: George Orwell</p>
+                    <p>Condition: Good</p>
+                    <a href="contact.html" class="contact-link">Contact Owner</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wishlist Section -->
+        <div class="wishlist">
+            <h2>Wishlist</h2>
+            <p>No books in your wishlist yet.</p>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="reviews">
+            <h2>Reviews</h2>
+            <p>No reviews yet.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 BookMates. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Logout Button Toggle
+        const loggedIn = localStorage.getItem('loggedIn');
+        if (loggedIn) {
+            document.getElementById('logoutButton').style.display = 'inline';
+        }
+    </script>
+
+</body>
+</html>

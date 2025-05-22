@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Browse Books - Find Your Next Great Read</title>
+  <link rel="stylesheet" href="browse-books.css" />
+  <style>
+    .search-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .search-input {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin: 5px;
+    }
+    .search-button {
+      padding: 10px 20px;
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .book-item {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    .book-item h2 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">📚 BookMates</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="post-book.html">Post a Book</a>
+      <a href="browse-books.html">Browse Books</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="javascript:void(0);" id="logoutButton" style="display: none;">Logout</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Browse Books</h1>
+      <p>Find your next great read!</p>
+    </div>
+  </section>
+
+  <div class="search-container">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <input type="text" id="search-input" class="search-input" placeholder="Search by title, author, or genre" />
+      <button class="search-button" onclick="searchBooks()">Search</button>
+      <select id="genre-filter" class="search-input">
+        <option value="">All Genres</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Non-fiction">Non-fiction</option>
+        <option value="Academic">Academic</option>
+        <option value="Children's Books">Children's Books</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+  </div>
+
+  <section class="book-grid">
+    <!-- Books loaded dynamically -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BookMates. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      loadBooks();
+      document.getElementById("genre-filter").addEventListener("change", searchBooks);
+    });
+
+    function loadBooks() {
+      fetch("displaybooks.php")
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector(".book-grid").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading books:", error));
+    }
+
+    function searchBooks() {
+      const searchTerm = document.getElementById('search-input').value.toLowerCase();
+      const selectedGenre = document.getElementById('genre-filter').value.toLowerCase();
+      const books = document.querySelectorAll('.book-item');
+
+      books.forEach(book => {
+        const title = book.querySelector('h2')?.textContent.toLowerCase() || '';
+        const author = book.querySelector('.author')?.textContent.toLowerCase() || '';
+        const genre = book.querySelector('.genre')?.textContent.toLowerCase() || '';
+
+        const matchesSearch = title.includes(searchTerm) || author.includes(searchTerm) || genre.includes(searchTerm);
+        const matchesGenre = !selectedGenre || genre === selectedGenre;
+
+        book.style.display = (matchesSearch && matchesGenre) ? '' : 'none';
+      });
+    }
+
+    function deleteBook(bookId) {
+      if (confirm("Are you sure you want to delete this book?")) {
+        fetch("delete-book.php?id=" + encodeURIComponent(bookId))
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              alert("Book deleted successfully.");
+              loadBooks();
+            } else {
+              alert("Failed to delete book: " + (data.message || "Unknown error"));
+            }
+          })
+          .catch(error => {
+            console.error("Error deleting book:", error);
+            alert("Error occurred while deleting the book.");
+          });
+      }
+    }
+
+    if (localStorage.getItem('loggedIn')) {
+      document.getElementById('logoutButton').style.display = 'inline';
+    }
+
+    document.getElementById('logoutButton').addEventListener('click', function () {
+      localStorage.removeItem('loggedIn');
+      window.location.href = 'Login.html';
+    });
+  </script>
+</body>
+</html>

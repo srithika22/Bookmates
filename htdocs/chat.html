@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Connect with Other Readers</title>
+
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <header>
+        <div class="logo">📚 BookMates</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="post-book.html">Post a Book</a>
+            <a href="browse-books.html">Browse Books</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="logout.js" id="logoutButton" style="display: none;">Logout</a>
+        </nav>
+        <script>
+            // Check if the user is logged in and show/hide the logout button
+            const loggedIn = localStorage.getItem('loggedIn');
+            if (loggedIn) {
+                document.getElementById('logoutButton').style.display = 'inline'; // Show logout button
+            }
+        </script>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Connect with Other Readers</h1>
+
+            <p>Use this chat to discuss book transactions and share recommendations!</p>
+
+        </div>
+    </section>
+
+    <div class="chat-container">
+        <div class="messages">
+            <!-- Example message -->
+            <div class="message">
+                <strong>User1:</strong> Is this book still available?
+            </div>
+            <div class="message">
+                <strong>User2:</strong> Yes, it is! When can we meet?
+            </div>
+        </div>
+        <input type="text" id="messageInput" placeholder="Type your message here...">
+        <button id="sendButton">Send</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 BookMates. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('sendButton').addEventListener('click', function() {
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value;
+            if (message) {
+                // Logic to send the message (e.g., to a server)
+                console.log('Message sent:', message);
+                messageInput.value = ''; // Clear input after sending
+            }
+        });
+    </script>
+</body>
+</html>

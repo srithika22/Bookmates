@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    overflow-x: hidden;
+    line-height: 1.6;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 20px 40px;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    border-bottom: 2px solid #ffcc00; /* Added border for emphasis */
+}
+
+header nav a {
+    padding: 10px 15px; /* Added padding for better click area */
+    border-radius: 5px; /* Rounded corners for links */
+}
+
+header nav a:hover {
+    background-color: rgba(255, 204, 0, 0.2); /* Background change on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 200px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: background-position 0.5s ease-in-out;
+    overflow: hidden;
+    border-bottom: 5px solid #ffcc00; /* Added border for emphasis */
+}
+
+.hero h1 {
+    text-shadow: 4px 4px 30px rgba(0, 0, 0, 0.8); /* Enhanced shadow for better readability */
+}
+
+.hero p {
+    font-size: 1.6rem; /* Increased font size for better visibility */
+}
+
+/* User Profiles Section */
+.user-profiles {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff; /* Added background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+.user-profiles h2 {
+    font-size: 2.5rem; /* Increased font size */
+    color: #1e3c72; /* Consistent color with theme */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.user-profiles .profile-card {
+    background-color: #f9f9f9; /* Light background for profile cards */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s;
+}
+
+.user-profiles .profile-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.user-profiles p {
+    font-size: 1.2rem; /* Increased font size for better readability */
+    color: #555; /* Darker text for contrast */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo {
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .cta-buttons .btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    .feature-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

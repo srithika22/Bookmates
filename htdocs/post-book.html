@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Post a Book - Share Your Literary Treasures</title>
+    <link rel="stylesheet" href="post-book.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">📚 BookMates</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="post-book.html">Post a Book</a>
+            <a href="browse-books.html">Browse Books</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">.</a>
+            <a href="#">.</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Post a Book</h1>
+            <p>Share your books with others!</p>
+        </div>
+    </section>
+
+    <h1>Post a Book</h1>
+
+    <form action="submit-book.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <input type="hidden" name="redirectPage" value="thank-you.html" />
+
+        <div class="form-group">
+            <label for="title">Book Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter book title" required />
+        </div>
+
+        <div class="form-group">
+            <label for="author">Author Name</label>
+            <input type="text" id="author" name="author" placeholder="Enter author name" required />
+        </div>
+
+        <div class="form-group">
+            <label for="category">Genre</label>
+            <select id="category" name="category" required>
+                <option value="">Select Genre</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Non-fiction">Non-fiction</option>
+                <option value="Academic">Academic</option>
+                <option value="Children">Children's Books</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="condition">Condition</label>
+            <select id="condition" name="condition" required>
+                <option value="">Select Condition</option>
+                <option value="New">New</option>
+                <option value="Like New">Like New</option>
+                <option value="Good">Good</option>
+                <option value="Fair">Fair</option>
+                <option value="Poor">Poor</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Is the book free?</label>
+            <input type="radio" id="free" name="is_free" value="yes" checked />
+            <label for="free">Free</label>
+            <input type="radio" id="not_free" name="is_free" value="no" />
+            <label for="not_free">Not Free</label>
+        </div>
+
+        <div class="form-group" id="price-group" style="display:none;">
+            <label for="price">Price</label>
+            <input type="number" id="price" name="price" min="0" step="1" placeholder="Enter price" />
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Enter address" required />
+        </div>
+
+        <div class="form-group">
+            <label for="contact">Contact</label>
+            <input type="text" id="contact" name="contact" placeholder="Enter contact information" required />
+        </div>
+
+        
+
+        <button type="submit">Post Book</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const freeRadio = document.getElementById("free");
+            const notFreeRadio = document.getElementById("not_free");
+            const priceGroup = document.getElementById("price-group");
+
+            function togglePriceField() {
+                if (notFreeRadio.checked) {
+                    priceGroup.style.display = "block";
+                    document.getElementById("price").setAttribute("required", "required");
+                } else {
+                    priceGroup.style.display = "none";
+                    document.getElementById("price").removeAttribute("required");
+                }
+            }
+
+            freeRadio.addEventListener("change", togglePriceField);
+            notFreeRadio.addEventListener("change", togglePriceField);
+
+            togglePriceField();
+        });
+
+        // Optional: Add validateForm() if you want client-side validation
+    </script>
+</body>
+</html>

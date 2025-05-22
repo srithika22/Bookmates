@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items"></div>
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="checkout()">Checkout</button>
+
+    <script>
+        // Load cart items from localStorage
+        function loadCartItems() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+            } else {
+                cart.forEach(item => {
+                    const itemElement = document.createElement('div');
+                    itemElement.classList.add('cart-item');
+                    itemElement.innerHTML = `<p><strong>${item.title}</strong> - ${item.price}</p>
+                                              <button onclick="removeFromCart(${item.id})">Remove</button>`;
+                    cartItemsContainer.appendChild(itemElement);
+                });
+            }
+        }
+
+        // Remove a book from the cart
+        function removeFromCart(bookId) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(item => item.id !== bookId);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Book removed from cart.');
+            updateCartIcon();
+            loadCartItems();
+        }
+
+        // Clear the entire cart
+        function clearCart() {
+            localStorage.removeItem('cart');
+            alert('Cart cleared.');
+            updateCartIcon();
+            loadCartItems();
+        }
+
+        // Checkout function (redirect to checkout page)
+        function checkout() {
+            alert('Proceeding to checkout...');
+            // You can integrate with a payment gateway here.
+        }
+
+        // Initialize cart items on page load
+        document.addEventListener('DOMContentLoaded', loadCartItems);
+    </script>
+
+</body>
+</html>

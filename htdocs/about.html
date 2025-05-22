@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About BookMates - Your Community for Book Exchange</title>
+
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header>
+        <div class="logo">📚 BookMates</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="post-book.html">Post a Book</a>
+            <a href="browse-books.html">Browse Books</a>
+            <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+                    
+       
+
+    </nav>
+    <style>
+        h2{
+            text-align:center;
+        }
+        #c{
+                color: violet;
+        }
+        </style>
+    <script>
+        // Check if the user is logged in and show/hide the logout button
+        const loggedIn = localStorage.getItem('loggedIn');
+        if (loggedIn) {
+            document.getElementById('logoutButton').style.display = 'inline'; // Show logout button
+        }
+    </script>
+
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>About BookMates</h1>
+
+            <p>At BookMates, we connect readers and book lovers to share, exchange, and discover books that inspire you. Our platform is designed to foster a vibrant community of book enthusiasts.</p>
+
+
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission">
+            <h2>Our Vision</h2>
+
+            <p>Our vision is to create a vibrant community where everyone can access a diverse range of books, fostering a culture of reading and sustainability. We aim to provide advanced features similar to major platforms, ensuring a seamless experience for all users. Join us in our mission to promote literacy and a love for reading.</p>
+
+
+        </section>
+     <h2 >Our Team</h2>
+        <!-- Team Section -->
+        <section class="team">
+           
+            <div class="team-member">
+                <h3>Sowmya</h3>
+                <img src="images/sowmya.jpg">
+                <p id="c">Role: Project Manager</p>
+                <p>Sowmya is responsible for overseeing the project and ensuring everything runs smoothly.</p>
+            </div>
+            <div class="team-member">
+                <h3>Rithika</h3>
+                <img src="images/rithika.jpg">
+                <p id="c">Role: Developer</p>
+                <p>Rithika is a skilled developer who works on the backend of the platform.</p>
+            </div>
+            <div class="team-member">
+                <h3>Vijitha</h3>
+                <img src="images/vijitha.jpeg">
+                <p id="c">Role: Designer</p>
+                <p>vijitha creates the user interface and ensures a great user experience.</p>
+            </div>
+        
+             <div class="team-member">
+                <h3>Karthik</h3>
+                <img src="images/karthik.jpeg">
+                <p id="c">Role: Designer</p>
+                <p>karthik is focued on overall front end of the project.</p>
+            </div>
+        
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BookMates. All rights reserved.</p>
+    </footer>
+</body>
+</html>
